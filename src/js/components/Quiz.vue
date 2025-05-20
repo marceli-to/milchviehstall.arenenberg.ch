@@ -23,7 +23,7 @@
         @click="selectAnswer(key)"
         :disabled="selected !== null"
         :class="[
-          'border-2 border-evergreen rounded-full px-16 py-8 text-sm text-left flex gap-8 items-center transition-all',
+          'border-2 border-evergreen rounded-full px-16 py-8 text-md text-left flex gap-8 items-center transition-all',
           selected !== null && key === currentQuestion.correct ? 'bg-evergreen text-white border-evergreen' : '',
           selected === key && key !== currentQuestion.correct ? 'bg-crimson text-blush !border-crimson' : '',
           selected === null ? 'border-evergreen hover:border-crimson hover:text-crimson' : ''
@@ -60,7 +60,7 @@
 
       <div class="flex justify-end">
         <button
-          class="border-2 border-evergreen rounded-full px-16 py-8 hover:border-crimson hover:text-crimson"
+          class="border-2 border-evergreen rounded-full px-16 py-8 hover:border-crimson hover:text-crimson disabled:hover:border-evergreen disabled:hover:text-evergreen"
           :disabled="selected === null"
           @click="nextQuestion">
           {{ __('Nächste Frage') }}
@@ -72,8 +72,10 @@
 
 <script setup>
 import { ref, computed, watch } from 'vue'
-import { useLanguageStore } from '@/js/stores/language'
 import HeadingTwo from '@/js/components/headings/H2.vue'
+
+import { useLanguageStore } from '@/js/stores/language'
+const { __ } = useLanguageStore()
 
 const props = defineProps({
   persona: {
@@ -81,8 +83,6 @@ const props = defineProps({
     required: true,
   },
 })
-
-const { __ } = useLanguageStore()
 
 // Load quiz data dynamically
 const quizMap = {
