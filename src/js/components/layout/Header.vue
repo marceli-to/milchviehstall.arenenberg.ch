@@ -30,7 +30,7 @@
         {{ __('Digitaler Kuhstall') }}
       </div>
       <div class="col-span-4 flex items-center gap-24">
-        <MenuLanguage class="mt-0 !justify-end" />
+        <MenuLanguage class="!justify-end" />
         <a href="#" 
           class="w-29 h-20 shrink-0 flex justify-center items-center" 
           @click="showMenu = !showMenu">

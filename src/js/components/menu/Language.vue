@@ -1,5 +1,5 @@
 <template>
-  <nav class="w-full flex justify-center mt-40">
+  <nav class="w-full flex" :class="{'justify-center mt-40': props.isHomepage}">
     <ul :class="['flex', isHomepage ? 'gap-64' : 'gap-18']">
       <li v-for="lang in languages" :key="lang.code">
         <button
