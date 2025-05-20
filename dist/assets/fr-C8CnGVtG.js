@@ -1,1 +1,0 @@
-const s="Aide",t="Impressum",e="Paramètres",n="Start (fr)",r={Hilfe:s,Impressum:t,Einstellungen:e,"Über uns":"À propos de nous",Start:n};export{e as Einstellungen,s as Hilfe,t as Impressum,n as Start,r as default};
