@@ -33,13 +33,14 @@ export default {
       },
 
       fontSize: {
-        'sm': '1rem',  // 16px
-        // 'md': '1.1875rem', // 19px
-        // 'lg': '1.313rem',  // 21px
-        'xl': '1.5rem',  // 24px
-        '2xl': '1.875rem',     // 30px
-        // '3xl': '2.5rem',   // 40px
-        '4xl': '3rem',     // 48px
+        'sm': '1rem',       // 16px
+        'md': '1.125rem',   // 18px
+        'lg': '1.375rem',   // 22px
+        'xl': '1.5rem',     // 24px
+        '2xl': '1.75rem',   // 28px
+        '3xl': '1.875rem',  // 30px
+        '4xl': '2.625rem',  // 42px
+        '5xl': '3rem',      // 48px
       },
 
       zIndex: {

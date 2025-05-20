@@ -1,7 +1,10 @@
 <template>
   <div 
-    class="absolute top-0 left-0 w-full h-full bg-blush"
-    :class="{ 'h-[910px] top-170 pt-24': props.isHomepage }"
+    class="absolute top-0 left-0 w-full bg-blush"
+    :class="{ 
+      'h-[910px] top-170 pt-24': props.isHomepage,
+      'h-[984px] top-95 pt-168': !props.isHomepage,
+    }"
     v-if="props.isOpen">
     <div class="grid grid-cols-18 gap-x-20 text-sm">
       <div class="col-span-4 col-start-2 border-t border-evergreen pt-4">
