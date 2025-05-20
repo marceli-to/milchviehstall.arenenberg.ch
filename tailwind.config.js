@@ -9,6 +9,14 @@ export default {
   theme: {
     extend: {
 
+      height: {
+        'display': '1080px',
+      },
+
+      width: {
+        'display': '1920px',
+      },
+
       colors: {
         'blush': '#fbdfe9',
         'crimson': '#d22837',
