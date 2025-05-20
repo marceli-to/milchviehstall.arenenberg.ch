@@ -1,6 +1,6 @@
 <template>
   <div 
-    class="absolute top-0 left-0 w-full bg-blush"
+    class="absolute top-0 z-50 left-0 w-full bg-blush"
     :class="{ 
       'h-[910px] top-170 pt-24': props.isHomepage,
       'h-[984px] top-95 pt-168': !props.isHomepage,

@@ -10,11 +10,11 @@
         <div class="shrink-0">
           <strong>{{ __('Start') }}</strong>
         </div>
-        <div
-          v-if="persona === null"
-          class="mt-24 pb-8 overflow-hidden">
-          <p>{{ __('Allgemeiner Introtext zum Spiel. Gehe mit Berta durch den Tag im Milchviehstall, beantworte zu jeder Tageszeit eine Frage und teste dein Wissen zum digitalen Kuhstall. Gehe mit Berta durch den Tag im Milchviehstall, beantworte zu jeder Tageszeit eine Frage und teste dein Wissen zum digitalen Kuhstall.') }}</p>
-        </div>
+        <FadeExpand :show="persona === null">
+          <div class="mt-24 pb-8 overflow-hidden">
+            <p>{{ __('Allgemeiner Introtext zum Spiel. Gehe mit Berta durch den Tag im Milchviehstall, beantworte zu jeder Tageszeit eine Frage und teste dein Wissen zum digitalen Kuhstall. Gehe mit Berta durch den Tag im Milchviehstall, beantworte zu jeder Tageszeit eine Frage und teste dein Wissen zum digitalen Kuhstall.') }}</p>
+          </div>
+        </FadeExpand>
       </div>
       <!-- // Start -->
 
@@ -43,16 +43,16 @@
           </div>
           
           <div class="mt-16">
-            <div v-show="persona === 'cow' || persona === 'farmer'">
-              <div v-if="persona === 'cow'">
-                <HeadingTwo class="!mb-0">{{ __('Frida') }}</HeadingTwo>
-                <p>{{ __('Frida ist eine Kuh am Arenenberg. Sie ist eine Kuh, die sich mit Berta vertraut gemacht hat.') }}</p>
-              </div>
-              <div v-if="persona === 'farmer'">
-                <HeadingTwo class="!mb-0">{{ __('Bäuerin') }}</HeadingTwo>
-                <p>{{ __('Frida ist eine Kuh am Arenenberg. Sie ist eine Kuh, die sich mit Berta vertraut gemacht hat.') }}</p>
-              </div>
-            </div>
+
+            <FadeExpand :show="persona === 'cow'">
+              <HeadingTwo class="!mb-0">{{ __('Frida') }}</HeadingTwo>
+              <p>{{ __('Die Kuh Frida ist 2010 geboren. Sie hat schon mehrmals gekalbert. Pro Tag liefert sie im Schnitt 28 Liter Milch.') }}</p>
+            </FadeExpand>
+
+            <FadeExpand :show="persona === 'farmer'">
+              <HeadingTwo class="!mb-0">{{ __('Bäuerin') }}</HeadingTwo>
+              <p>{{ __('Frida ist eine Kuh am Arenenberg. Sie ist eine Kuh, die sich mit Berta vertraut gemacht hat.') }}</p>
+            </FadeExpand>
           </div>
         </div>
       </div>
@@ -62,8 +62,14 @@
     <!-- // Sidebar -->
 
     <!-- Map -->
-    <div class="col-span-13 h-[inherit] border-l border-evergreen">
-      
+    <div class="col-span-13 px-16 pt-60 overflow-hidden h-[inherit] border-l border-evergreen">
+      <Map />
+
+      <div 
+        class="absolute -bottom-20 right-24 w-full max-w-lg"
+        :class="persona === null ? 'opacity-0' : 'opacity-100 transition-all duration-500'">
+        <Quiz :persona="persona" v-if="persona !== null" />
+      </div>
     </div>
     <!-- // Map -->
 
@@ -76,6 +82,9 @@ import Main from '@/js/components/layout/Main.vue';
 import HeadingTwo from '@/js/components/headings/H2.vue';
 import IconCow from '@/js/components/icons/Cow.vue';
 import IconFarmer from '@/js/components/icons/Farmer.vue';
+import Map from '@/js/components/Map.vue';
+import FadeExpand from '@/js/components/FadeExpand.vue';
+import Quiz from '@/js/components/Quiz.vue';
 
 import { useLanguageStore } from '@/js/stores/language'
 const { __ } = useLanguageStore()

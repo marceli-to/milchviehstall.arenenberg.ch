@@ -13,6 +13,18 @@ export default {
         '18': 'repeat(18, minmax(0, 1fr))',
       },
 
+      gridColumn: {
+        'span-13': 'span 13 / span 13',
+        'span-14': 'span 14 / span 14',
+        'span-15': 'span 15 / span 15',
+        'span-16': 'span 16 / span 16',
+        'span-17': 'span 17 / span 17',
+        'span-18': 'span 18 / span 18'
+      },
+
+      // col-span-13
+
+
       height: {
         'display': '1080px',
       },
@@ -34,7 +46,7 @@ export default {
 
       fontSize: {
         'sm': '1rem',       // 16px
-        'md': '1.125rem',   // 18px
+        'md': '1.25rem',    // 20px
         'lg': '1.375rem',   // 22px
         'xl': '1.5rem',     // 24px
         '2xl': '1.75rem',   // 28px
