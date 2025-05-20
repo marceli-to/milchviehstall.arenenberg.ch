@@ -15,7 +15,7 @@
     </header>
   </template>
   <template v-else>
-    <header class="w-full p-24 relative grid grid-cols-18 gap-x-20 items-center border-b border-evergreen">
+    <header class="w-[1872px] py-24 mx-24 relative grid grid-cols-18 gap-x-20 items-center border-b border-evergreen">
       <div class="col-span-4">
         <HeadingOne>
           <router-link to="/">

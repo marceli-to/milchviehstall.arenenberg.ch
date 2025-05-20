@@ -1,1 +1,0 @@
-const e="Help",n="Impressum",r="Settings",t="Start",s={Hilfe:e,Impressum:n,Einstellungen:r,"Über uns":"About us",Start:t,"Kaiser, Kühe und Kultur":"Kaiser, Kühe und Kultur (en)","Ein Parcours durch die Arenenberger Vielfalt":"Ein Parcours durch die Arenenberger Vielfalt (en)"};export{r as Einstellungen,e as Hilfe,n as Impressum,t as Start,s as default};

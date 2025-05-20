@@ -1,9 +1,15 @@
 <template>
   <Header />
-  <Main class="w-full flex flex-col items-center justify-center pt-44">
+  <Main class="w-full h-[985px] flex flex-col items-center justify-between py-44">
     <HeadingOne class="text-5xl">
       {{ __('Passcode') }}
     </HeadingOne>
+    <div class="my-40">
+      [Login Form / Tastatur]
+    </div>
+    <div class="mt-30 w-full flex justify-center">
+      <ButtonPrimary :label="__('Start')" to="/parcours" isLink />
+    </div>
   </Main>
 </template>
 <script setup>
