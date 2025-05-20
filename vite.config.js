@@ -5,8 +5,5 @@ export default defineConfig({
   plugins: [vue()],
   server: {
     host: 'milchviehstall.arenenberg.ch.test'
-  },
-  build: {
-    outDir: 'public'
   }
 })
