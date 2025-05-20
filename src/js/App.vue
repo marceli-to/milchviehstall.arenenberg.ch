@@ -1,9 +1,9 @@
 <template>
   <div>
-    <Menu />
+    <!-- <Menu /> -->
     <router-view />
   </div>
 </template>
-<script setup>
+<!-- <script setup>
 import Menu from '@/js/components/Menu.vue';
-</script>
+</script> -->
