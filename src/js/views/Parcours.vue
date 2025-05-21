@@ -26,20 +26,18 @@
         <div>
 
           <div class="flex gap-x-60 ml-60 mx-auto mt-8">
-            <a 
-              href="#" 
+            <button 
               class="hover:text-crimson"
               :class="{ 'text-crimson': persona === 'cow' }"
               @click="persona = 'cow'">
               <IconCow />
-            </a>
-            <a 
-              href="#" 
+            </button>
+            <button 
               class="hover:text-crimson"
               :class="{ 'text-crimson': persona === 'farmer' }"
               @click="persona = 'farmer'">
               <IconFarmer />
-            </a>
+            </button>
           </div>
           
           <div class="mt-16">
