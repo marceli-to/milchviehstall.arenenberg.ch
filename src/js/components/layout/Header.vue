@@ -6,12 +6,12 @@
         <span class="block ml-156">Étable à vaches numérique</span>
         <span class="block ml-376">Digital cowshed</span>
       </div>
-      <a href="#" 
+      <button 
         class="absolute top-37 right-24 z-10 w-29 h-20 flex justify-center items-center" 
         @click="showMenu = !showMenu">
         <IconBurger v-if="!showMenu" />
         <IconCross v-else />
-      </a>
+      </button>
     </header>
   </template>
   <template v-else>
@@ -31,12 +31,12 @@
       </div>
       <div class="col-span-4 flex items-center gap-24">
         <MenuLanguage class="!justify-end" />
-        <a href="#" 
+        <button
           class="w-29 h-20 shrink-0 flex justify-center items-center" 
           @click="showMenu = !showMenu">
           <IconBurger v-if="!showMenu" />
           <IconCross v-else />
-        </a>
+        </button>
       </div>
     </header>
   </template>
