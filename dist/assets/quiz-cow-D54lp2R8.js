@@ -1,1 +1,0 @@
-const e=[{question:"Wer gibt den Kühen im Arenenberger Stall ihre Namen?",options:{A:"Die Kühe",B:"Die Betriebsleitung",C:"Die Besucher:innen",D:"Der Kanton Thurgau"},correct:"C"},{question:"Wie viele Mägen hat eine Kuh?",options:{A:"1",B:"2",C:"3",D:"4"},correct:"D"}];export{e as default};
