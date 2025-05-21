@@ -1,1 +1,0 @@
-const e=[{question:"Was ist der erste Schritt im Melkprozess?",options:{A:"Kühe füttern",B:"Euter reinigen",C:"Kuh identifizieren",D:"Milch abfüllen"},correct:"B"},{question:"Wie viele Liter Milch produziert eine Kuh durchschnittlich pro Tag?",options:{A:"5",B:"15",C:"25",D:"50"},correct:"C"}];export{e as default};
