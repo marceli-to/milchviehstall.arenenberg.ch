@@ -27,6 +27,6 @@ const props = defineProps({
 </script>
 <style scoped>
 .btn-primary {
-  @apply text-lg rounded-full border-2 border-evergreen w-full h-42 flex justify-center items-center max-w-200;
+  @apply text-lg rounded-full border-2 border-evergreen hover:border-crimson hover:text-crimson transition-all w-full h-42 flex justify-center items-center max-w-200;
 }
 </style>

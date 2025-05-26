@@ -56,7 +56,7 @@
           {{ __('Falsch! Richtig ist Antwort') }} {{ currentQuestion.correct }}
         </span>
       </div>
-      <div v-else"></div>
+      <div v-else></div>
 
       <div class="flex justify-end">
         <button

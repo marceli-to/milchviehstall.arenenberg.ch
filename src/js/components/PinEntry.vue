@@ -22,11 +22,11 @@
         v-for="(n, i) in numbers"
         :key="n"
         @click="handleInput(n)"
-        class="w-64 h-64 rounded-full leading-none border-2 border-evergreen text-evergreen"
+        class="w-64 h-64 rounded-full leading-none border-2 border-evergreen text-evergreen hover:border-crimson hover:text-crimson transition-all"
         :class="i == numbers.length-1 ? 'col-start-2' : ''">
         {{ n }}
       </button>
-      <button @click="clearLast()" class="w-64 h-64 flex items-center justify-center rounded-full leading-none border-2 border-evergreen text-evergreen">
+      <button @click="clearLast()" class="w-64 h-64 flex items-center justify-center rounded-full leading-none border-2 border-evergreen text-evergreen hover:border-crimson hover:text-crimson transition-all">
         <IconBackspace class="w-32 h-auto -ml-2" />
       </button>
     </div>
@@ -69,7 +69,7 @@ const validate = () => {
 
   if (entered !== correctPin) {
     showError.value = true
-    setTimeout(reset, 1200)
+    setTimeout(reset, 2000)
   } 
   else {
     isValid.value = true

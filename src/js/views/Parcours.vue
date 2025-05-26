@@ -56,6 +56,15 @@
       </div>
       <!-- // Personas -->
 
+      <!-- Timeline -->
+      <template v-if="persona">
+        <div class="pt-8 mb-24">
+          <strong>{{ __('Tageszeit') }}</strong>
+        </div>
+        <TimeLine :persona="persona" />
+      </template>
+      <!-- // Timeline -->
+
     </div>
     <!-- // Sidebar -->
 
@@ -83,6 +92,7 @@ import IconFarmer from '@/js/components/icons/Farmer.vue';
 import Map from '@/js/components/Map.vue';
 import FadeExpand from '@/js/components/FadeExpand.vue';
 import Quiz from '@/js/components/Quiz.vue';
+import TimeLine from '@/js/components/TimeLine.vue';
 
 import { useLanguageStore } from '@/js/stores/language'
 const { __ } = useLanguageStore()
