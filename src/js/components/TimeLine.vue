@@ -28,7 +28,7 @@
           v-if="i != activeIndex">
           {{ step.time }}
         </span>
-        <div class="w-14 h-14 rounded-full bg-evergreen border-2 border-blush"></div>
+        <div class="w-14 h-14 rounded-full bg-evergreen border-2 border-blush cursor-pointer"></div>
       </div>
       <!-- // Steps -->
 
