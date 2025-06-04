@@ -3,36 +3,36 @@
     class="w-full" 
     v-if="currentQuestion">
 
-    <header class="flex justify-between items-center pb-4 mb-8 border-b-2 border-evergreen">
+    <header class="flex justify-between items-end pb-4 mb-8 border-b-2 border-evergreen">
       <HeadingTwo class="!mb-0">
         {{ __('Quiz') }}
       </HeadingTwo>
-      <div class="text-md text-evergreen">
+      <div class="text-sm text-evergreen">
         <strong>{{ current + 1 }}/{{ questions.length }} {{ __('Fragen') }}</strong>
       </div>
     </header>
 
-    <div class="text-md mb-16">
+    <div class="text-sm mb-20">
       {{ __(currentQuestion.question) }}
     </div>
 
-    <div class="grid grid-cols-2 gap-y-10 gap-x-20">
+    <div class="grid grid-cols-2 gap-y-10 gap-x-16">
       <button
         v-for="(text, key) in currentQuestion.options"
         :key="key"
         @click="selectAnswer(key)"
         :disabled="selected !== null"
         :class="[
-          'border-2 border-evergreen rounded-full px-16 py-8 text-md text-left flex gap-8 items-center transition-all',
+          'border-2 border-evergreen rounded-full px-16 py-8 text-sm text-left flex gap-8 items-center transition-all',
           selected !== null && key === currentQuestion.correct ? 'bg-evergreen text-white border-evergreen' : '',
           selected === key && key !== currentQuestion.correct ? 'bg-crimson text-blush !border-crimson' : '',
           selected === null ? 'border-evergreen hover:border-crimson hover:text-crimson' : ''
         ]">
         <span 
-          class="font-bold "
+          class="font-bold text-crimson"
           :class="[
-            selected !== null && key === currentQuestion.correct ? 'text-white' : '',
-            selected === key && key !== currentQuestion.correct ? 'text-blush' : ''
+            selected !== null && key === currentQuestion.correct ? '!text-white' : '',
+            selected === key && key !== currentQuestion.correct ? '!text-blush' : ''
           ]">
           {{ key }}
         </span>
@@ -43,7 +43,7 @@
     <div class="mt-16 border-t-2 border-evergreen pt-12 flex justify-between items-center">
 
       <div 
-        class="text-md" 
+        class="text-sm" 
         v-if="selected !== null">
         <span 
           class="text-evergreen"
@@ -60,7 +60,7 @@
 
       <div class="flex justify-end">
         <button
-          class="border-2 border-evergreen rounded-full px-16 py-8 hover:border-crimson hover:text-crimson disabled:hover:border-evergreen disabled:hover:text-evergreen"
+          class="border-2 border-evergreen text-sm rounded-full px-16 py-8 hover:border-crimson hover:text-crimson disabled:hover:border-evergreen disabled:hover:text-evergreen"
           :disabled="selected === null"
           @click="nextQuestion">
           {{ __('Nächste Frage') }}

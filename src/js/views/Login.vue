@@ -2,7 +2,7 @@
   <Header />
   <Main class="w-full h-[985px] flex flex-col items-center py-44">
     <HeadingOne class="text-5xl">
-      {{ __('Passcode') }}
+      {{ __('Schlüssel') }}
     </HeadingOne>
     <PinEntry />
   </Main>

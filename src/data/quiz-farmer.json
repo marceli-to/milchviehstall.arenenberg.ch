@@ -4,8 +4,7 @@
     "options": {
       "A": "Kühe füttern",
       "B": "Euter reinigen",
-      "C": "Kuh identifizieren",
-      "D": "Milch abfüllen"
+      "C": "Kuh identifizieren"
     },
     "correct": "B"
   },
@@ -14,8 +13,7 @@
     "options": {
       "A": "5",
       "B": "15",
-      "C": "25",
-      "D": "50"
+      "C": "25"
     },
     "correct": "C"
   }

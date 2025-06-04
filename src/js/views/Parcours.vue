@@ -7,7 +7,7 @@
 
       <!-- Start -->
       <div class="flex gap-x-24 pb-16 -mt-8 border-b border-evergreen">
-        <div class="shrink-0">
+        <div class="shrink-0 text-sm">
           <strong>{{ __('Start') }}</strong>
         </div>
         <FadeExpand :show="persona === null">
@@ -20,36 +20,36 @@
 
       <!-- Personas -->
       <div class="flex pt-8 pb-16 border-b border-evergreen">
-        <div>
+        <div class="text-sm">
           <strong>{{ __('Persona') }}</strong>
         </div>
         <div>
 
           <div class="flex gap-x-60 ml-60 mx-auto mt-8">
             <button 
-              class="hover:text-crimson"
-              :class="{ 'text-crimson': persona === 'cow' }"
+              class="border-2 border-evergreen rounded-full"
+              :class="{ '!border-crimson': persona === 'cow' }"
               @click="persona = 'cow'">
               <IconCow />
             </button>
             <button 
-              class="hover:text-crimson"
-              :class="{ 'text-crimson': persona === 'farmer' }"
+              class="border-2 border-evergreen rounded-full"
+              :class="{ '!border-crimson': persona === 'farmer' }"
               @click="persona = 'farmer'">
               <IconFarmer />
             </button>
           </div>
           
-          <div class="mt-16">
+          <div class="mt-16 ml-24">
 
             <FadeExpand :show="persona === 'cow'">
               <HeadingTwo class="!mb-0">{{ __('Frida') }}</HeadingTwo>
-              <p>{{ __('Die Kuh Frida ist 2010 geboren. Sie hat schon mehrmals gekalbert. Pro Tag liefert sie im Schnitt 28 Liter Milch.') }}</p>
+              <p class="!text-md">{{ __('Die Kuh Frida ist 2010 geboren. Sie hat schon mehrmals gekalbert. Pro Tag liefert sie im Schnitt 28 Liter Milch.') }}</p>
             </FadeExpand>
 
             <FadeExpand :show="persona === 'farmer'">
               <HeadingTwo class="!mb-0">{{ __('Bäuerin') }}</HeadingTwo>
-              <p>{{ __('Frida ist eine Kuh am Arenenberg. Sie ist eine Kuh, die sich mit Berta vertraut gemacht hat.') }}</p>
+              <p class="!text-md">{{ __('Frida ist eine Kuh am Arenenberg. Sie ist eine Kuh, die sich mit Berta vertraut gemacht hat.') }}</p>
             </FadeExpand>
           </div>
         </div>
@@ -58,7 +58,7 @@
 
       <!-- Timeline -->
       <template v-if="persona">
-        <div class="pt-8 mb-24">
+        <div class="pt-8 mb-24 text-sm">
           <strong>{{ __('Tageszeit') }}</strong>
         </div>
         <TimeLine :persona="persona" />

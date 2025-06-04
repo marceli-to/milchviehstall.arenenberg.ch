@@ -13,7 +13,7 @@
     "timeLabel": "09.00 Uhr",
     "timeDescription": "Frida geht auf die Weide.",
     "title": "Freier Tierverkehr",
-    "description": "Frida und die anderen Kühe am Arenenberg geniessen grosse Freiheit. Sie entscheiden selbst, wann sie fressen, liegen oder sich melken lassen. Der Betriebsleiter motiviert aber die Kühe, das zu tun, was er möchte."
+    "description": "Die Kuh soll im Sommer möglichst viel junges Gras auf der Weide fressen. Jedoch soll sie nicht den ganzen Tag auf der Weide sein. Mindestens zweimal pro Tag muss sie gemolken werden. Die Weide ist so gross, dass die Kühe sie in einigen Stunden abweiden. Mit dem Wissen, dass sie am Nachmittag wieder auf eine frische Weide gehen können, gehen die Kühe vor dem Mittag zurück in den Stall und lassen sich melken. Danach dürfen sie auf eine frische Weide gehen."
   },
   {
     "time": "12.00",
@@ -21,11 +21,11 @@
     "timeLabel": "12.00 Uhr",
     "timeDescription": "Frida geht auf die Weide.",
     "title": "Freier Tierverkehr",
-    "description": "Frida und die anderen Kühe am Arenenberg geniessen grosse Freiheit. Sie entscheiden selbst, wann sie fressen, liegen oder sich melken lassen. Der Betriebsleiter motiviert aber die Kühe, das zu tun, was er möchte."
+    "description": "Die Kuh soll im Sommer möglichst viel junges Gras auf der Weide fressen. Jedoch soll sie nicht den ganzen Tag auf der Weide sein. Mindestens zweimal pro Tag muss sie gemolken werden. Die Weide ist so gross, dass die Kühe sie in einigen Stunden abweiden. Mit dem Wissen, dass sie am Nachmittag wieder auf eine frische Weide gehen können, gehen die Kühe vor dem Mittag zurück in den Stall und lassen sich melken. Danach dürfen sie auf eine frische Weide gehen."
   },
   {
     "time": "20.00",
-    "position": 90,
+    "position": 85,
     "timeLabel": "20.00 Uhr",
     "timeDescription": "Frida geht auf die Weide.",
     "title": "Freier Tierverkehr",

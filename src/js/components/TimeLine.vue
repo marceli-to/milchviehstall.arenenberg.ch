@@ -8,10 +8,9 @@
       <!-- Time dots + labels -->
       <div class="absolute flex flex-col items-center top-0">
         <span 
-          class="text-xs -ml-10 absolute left-32 top-0">
+          class="text-xs absolute left-13 top-0">
           06.00
         </span>
-        <div class="w-14 h-14 rounded-full bg-evergreen border-2 border-blush"></div>
       </div>
 
       <div
@@ -21,8 +20,7 @@
         :style="{ top: `${step.position}%` }"
        >
         <span 
-          class="text-xs -ml-10 absolute left-32"
-          :style="{ top: `${step.position}%` }"
+          class="text-xs absolute left-20"
           v-if="i != activeIndex">
           {{ step.time }}
         </span>
@@ -31,24 +29,23 @@
 
       <div class="absolute flex flex-col items-center bottom-0">
         <span 
-          class="text-xs -ml-10 absolute left-32 bottom-0">
+          class="text-xs absolute left-13 bottom-0">
           22.00
         </span>
-        <div class="w-14 h-14 rounded-full bg-evergreen border-2 border-blush"></div>
       </div>
 
       <!-- Active marker + triangles -->
       <div
-        class="absolute left-1/2 -translate-x-1/2 -translate-y-26 flex flex-col items-center transition-all duration-500"
+        class="absolute left-1/2 -translate-x-1/2 -translate-y-28 flex flex-col items-center transition-all duration-500"
         :style="{ top: `${steps[activeIndex].position}%` }">
-        <button @click="goUp" class="text-crimson mb-4">
-          <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <button @click="goUp" class="text-crimson">
+          <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-34 h-auto">
             <path d="M11.748 1.97198L21.748 18.972H1.74805L11.748 1.97198Z" fill="#D22837" stroke="#FBE1E9" stroke-width="2"/>
           </svg>
         </button>
-        <div class="w-24 h-24 bg-crimson rounded-full mb-4 border-2 border-blush"></div>
+        <div class="size-17 bg-crimson rounded-full border-2 border-blush"></div>
         <button @click="goDown" class="text-crimson">
-          <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-34 h-auto">
             <path d="M11.748 18L1.74805 1L21.748 1L11.748 18Z" fill="#D22837" stroke="#FBE1E9" stroke-width="2"/>
           </svg>
         </button>
@@ -66,14 +63,14 @@
           class="absolute left-0 w-full flex flex-col gap-x-20"
           :style="{ top: `${steps[activeIndex].position}%` }">
 
-          <div class="flex">
+          <div class="flex ml-42">
             <div class="w-[40%] flex flex-col justify-start">
               <h3 class="text-xl text-crimson">{{ steps[activeIndex].timeLabel }}</h3>
-              <p>{{ steps[activeIndex].timeDescription }}</p>
+              <p class="text-sm">{{ steps[activeIndex].timeDescription }}</p>
             </div>
-            <div class="w-[60%]">
+            <div class="w-[60%] pl-8">
               <h3 class="text-xl text-crimson">{{ steps[activeIndex].title }}</h3>
-              <div v-if="steps[activeIndex].description">
+              <div class="text-sm" v-if="steps[activeIndex].description">
                 {{ steps[activeIndex].description }}
               </div>
             </div>
@@ -90,14 +87,14 @@
           class="absolute left-0 w-full flex flex-col gap-x-20"
           :style="{ bottom: `${90 - steps[activeIndex].position}%` }">
 
-          <div class="flex">
+          <div class="flex ml-42">
             <div class="w-[40%] flex flex-col justify-end">
               <h3 class="text-xl text-crimson">{{ steps[activeIndex].timeLabel }}</h3>
-              <p>{{ steps[activeIndex].timeDescription }}</p>
+              <p class="text-sm">{{ steps[activeIndex].timeDescription }}</p>
             </div>
             <div class="w-[60%]">
               <h3 class="text-xl text-crimson">{{ steps[activeIndex].title }}</h3>
-              <div v-if="steps[activeIndex].description">
+              <div class="text-sm" v-if="steps[activeIndex].description">
                 {{ steps[activeIndex].description }}
               </div>
             </div>
