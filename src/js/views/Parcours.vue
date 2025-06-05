@@ -7,7 +7,7 @@
 
       <!-- Start -->
       <div class="flex gap-x-24 pb-16 -mt-8 border-b border-evergreen">
-        <div class="shrink-0 text-sm">
+        <div class="text-sm min-w-75">
           <strong>{{ __('Start') }}</strong>
         </div>
         <FadeExpand :show="persona === null">
@@ -20,7 +20,7 @@
 
       <!-- Personas -->
       <div class="flex pt-8 pb-16 border-b border-evergreen">
-        <div class="text-sm">
+        <div class="text-sm min-w-75">
           <strong>{{ __('Persona') }}</strong>
         </div>
         <div>
@@ -83,7 +83,8 @@
   </Main>
 </template>
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted, onBeforeUnmount } from 'vue';
+import { useRouter } from 'vue-router';
 import Header from '@/js/components/layout/Header.vue';
 import Main from '@/js/components/layout/Main.vue';
 import HeadingTwo from '@/js/components/headings/H2.vue';
@@ -98,6 +99,22 @@ import { useLanguageStore } from '@/js/stores/language'
 const { __ } = useLanguageStore()
 
 let persona = ref(null);
+
+const router = useRouter();
+let timeoutId;
+
+const limitTime = 900000; // 15 minutes
+
+onMounted(() => {
+  timeoutId = setTimeout(() => {
+    router.push({ name: 'home' });
+  }, limitTime);
+});
+
+onBeforeUnmount(() => {
+  clearTimeout(timeoutId);
+});
+
 </script>
 
 

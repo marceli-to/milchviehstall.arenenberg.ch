@@ -1,10 +1,8 @@
 <template>
   <template v-if="props.isHomepage">
-    <header class="w-full p-24 !pb-0 relative flex justify-center items-center">
-      <div class="text-crimson text-5xl leading-none">
-        <span class="block">Milch mit Zukunft</span>
-        <span class="block ml-156">Un lait qui a de l'avenir</span>
-        <span class="block ml-376">Milk with a future</span>
+    <header class="w-[1872px] h-95 py-24 mx-24 relative flex justify-center items-center border-b border-evergreen">
+      <div class="text-4xl leading-none text-crimson">
+        {{ __('Milch mit Zukunft') }}
       </div>
       <!-- 
       <button 
@@ -17,7 +15,7 @@
     </header>
   </template>
   <template v-else>
-    <header class="w-[1872px] py-24 mx-24 relative grid grid-cols-18 gap-x-20 items-center border-b border-evergreen">
+    <header class="w-[1872px] h-95 py-24 mx-24 relative grid grid-cols-18 gap-x-20 items-center border-b border-evergreen">
       <div class="col-span-6">
         <HeadingOne>
           <router-link to="/">

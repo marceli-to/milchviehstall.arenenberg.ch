@@ -71,7 +71,7 @@
           class="absolute left-0 w-full flex flex-col gap-x-20"
           :style="{ top: `${steps[activeIndex].position}%` }">
 
-          <div class="flex ml-42">
+          <div class="flex ml-59">
             <div class="w-[40%] flex flex-col justify-start">
               <h3 class="text-xl text-crimson">{{ steps[activeIndex].timeLabel }}</h3>
               <p class="text-sm">{{ steps[activeIndex].timeDescription }}</p>
@@ -95,7 +95,7 @@
           class="absolute left-0 w-full flex flex-col gap-x-20"
           :style="{ bottom: `${90 - steps[activeIndex].position}%` }">
 
-          <div class="flex ml-42">
+          <div class="flex ml-59">
             <div class="w-[40%] flex flex-col justify-end">
               <h3 class="text-xl text-crimson">{{ steps[activeIndex].timeLabel }}</h3>
               <p class="text-sm">{{ steps[activeIndex].timeDescription }}</p>
