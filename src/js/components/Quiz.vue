@@ -120,11 +120,11 @@ watch(() => props.persona, async (newPersona) => {
 function selectAnswer(key) {
   selected.value = key
 
-  // If it's the last question, start 5-second timer
+  // If it's the last question, start 3-second timer
   if (current.value === questions.value.length - 1) {
     setTimeout(() => {
       quizFinished.value = true
-    }, 1000)
+    }, 3000)
   }
 }
 
