@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full" v-if="currentQuestion || finished">
+  <div class="w-full" v-if="currentQuestion">
 
     <!-- Header -->
     <header class="flex justify-between items-end pb-4 mb-8 border-b-2 border-evergreen">
@@ -11,53 +11,46 @@
       </div>
     </header>
 
-    <!-- Question & Answers or Completion Message -->
-    <div class="min-h-132">
-      <template v-if="!finished">
-        <!-- Question -->
-        <div class="text-sm mb-20">
-          {{ __(currentQuestion.question) }}
-        </div>
+    <!-- Main content -->
+    <div class="text-sm mb-20">
+      <div v-if="!quizFinished">
+        {{ __(currentQuestion.question) }}
+      </div>
+      <div v-else class="min-h-123 text-md">
+        {{ __('Du hast das Spiel zu Ende gespielt') }}
+      </div>
+    </div>
 
-        <!-- Answer Options -->
-        <div class="grid grid-cols-2 gap-y-10 gap-x-16">
-          <button
-            v-for="(text, key) in currentQuestion.options"
-            :key="key"
-            @click="selectAnswer(key)"
-            :disabled="selected !== null"
-            :class="[
-              'border-2 border-evergreen rounded-full px-16 py-8 text-sm text-left flex gap-8 items-center transition-all',
-              selected !== null && key === currentQuestion.correct ? 'bg-evergreen text-white border-evergreen' : '',
-              selected === key && key !== currentQuestion.correct ? 'bg-crimson text-blush !border-crimson' : '',
-              selected === null ? 'border-evergreen hover:border-crimson hover:text-crimson' : ''
-            ]">
-            <span 
-              class="font-bold text-crimson"
-              :class="[
-                selected !== null && key === currentQuestion.correct ? '!text-white' : '',
-                selected === key && key !== currentQuestion.correct ? '!text-blush' : ''
-              ]">
-              {{ key }}
-            </span>
-            <span>{{ __(text) }}</span>
-          </button>
-        </div>
-      </template>
-
-      <!-- Finished Message -->
-      <template v-else>
-        <div class="text-md">
-          {{ __('Du hast das Spiel durchgespielt.') }}
-        </div>
-      </template>
+    <!-- Answer options -->
+    <div class="grid grid-cols-2 gap-y-10 gap-x-16" v-if="!quizFinished">
+      <button
+        v-for="(text, key) in currentQuestion.options"
+        :key="key"
+        @click="selectAnswer(key)"
+        :disabled="selected !== null"
+        :class="[
+          'border-2 border-evergreen rounded-full px-16 py-8 text-sm text-left flex gap-8 items-center transition-all',
+          selected !== null && key === currentQuestion.correct ? 'bg-evergreen text-white border-evergreen' : '',
+          selected === key && key !== currentQuestion.correct ? 'bg-crimson text-blush !border-crimson' : '',
+          selected === null ? 'border-evergreen hover:border-crimson hover:text-crimson' : ''
+        ]">
+        <span 
+          class="font-bold text-crimson"
+          :class="[
+            selected !== null && key === currentQuestion.correct ? '!text-white' : '',
+            selected === key && key !== currentQuestion.correct ? '!text-blush' : ''
+          ]">
+          {{ key }}
+        </span>
+        <span>{{ __(text) }}</span>
+      </button>
     </div>
 
     <!-- Footer -->
     <div class="mt-16 border-t-2 border-evergreen pt-12 flex justify-between items-center">
-      
+
       <!-- Feedback -->
-      <div class="text-sm" v-if="!finished && selected !== null">
+      <div class="text-sm" v-if="selected !== null && !quizFinished">
         <span class="text-evergreen" v-if="selected === currentQuestion.correct">
           {{ __('Deine Antwort war korrekt.') }}
         </span>
@@ -67,18 +60,18 @@
       </div>
       <div v-else></div>
 
-      <!-- Button -->
+      <!-- Button area -->
       <div class="flex justify-end">
-        <!-- Next / Finish -->
+        <!-- "Nächste Frage" or "Abschliessen" button -->
         <button
-          v-if="!finished"
+          v-if="!quizFinished"
           class="border-2 border-evergreen text-sm rounded-full px-16 py-8 hover:border-crimson hover:text-crimson disabled:hover:border-evergreen disabled:hover:text-evergreen"
           :disabled="selected === null"
           @click="nextQuestion">
-          {{ current === questions.length - 1 ? __('Abschliessen') : __('Nächste Frage') }}
+          {{ __('Nächste Frage') }}
         </button>
 
-        <!-- Restart -->
+        <!-- "Erneut spielen" button -->
         <button
           v-else
           class="border-2 border-evergreen text-sm rounded-full px-16 py-8 hover:border-crimson hover:text-crimson"
@@ -87,15 +80,14 @@
         </button>
       </div>
     </div>
+
   </div>
 </template>
-
-
 <script setup>
 import { ref, computed, watch } from 'vue'
 import HeadingTwo from '@/js/components/headings/H2.vue'
-
 import { useLanguageStore } from '@/js/stores/language'
+
 const { __ } = useLanguageStore()
 
 const props = defineProps({
@@ -113,7 +105,7 @@ const quizMap = {
 const questions = ref([])
 const current = ref(0)
 const selected = ref(null)
-const finished = ref(false) // <-- NEW
+const quizFinished = ref(false)
 
 const currentQuestion = computed(() => questions.value[current.value])
 
@@ -127,21 +119,26 @@ watch(() => props.persona, async (newPersona) => {
 
 function selectAnswer(key) {
   selected.value = key
+
+  // If it's the last question, start 5-second timer
+  if (current.value === questions.value.length - 1) {
+    setTimeout(() => {
+      quizFinished.value = true
+    }, 1000)
+  }
 }
 
 function nextQuestion() {
   if (current.value < questions.value.length - 1) {
     current.value++
     selected.value = null
-  } else {
-    finished.value = true
   }
 }
 
 function resetQuiz() {
   current.value = 0
   selected.value = null
-  finished.value = false
+  quizFinished.value = false
 }
-
 </script>
+
