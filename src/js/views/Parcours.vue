@@ -12,7 +12,8 @@
         </div>
         <FadeExpand :show="persona === null">
           <div class="mt-24 pb-8 overflow-hidden">
-            <p>{{ __('Allgemeiner Introtext zum Spiel. Gehe mit Berta durch den Tag im Milchviehstall, beantworte zu jeder Tageszeit eine Frage und teste dein Wissen zum digitalen Kuhstall. Gehe mit Berta durch den Tag im Milchviehstall, beantworte zu jeder Tageszeit eine Frage und teste dein Wissen zum digitalen Kuhstall.') }}</p>
+            <p class="mb-16">{{ __('Willkommen im Arenenberger Milchviehstall!') }}</p>
+            <p>{{ __('Du begleitest die Kuh Frida durch einen typischen Apriltag und entdeckst die Arbeiten im Arenenberger Milchviehstall. Wähle eine Persona aus und klicke auf dem Zeitstrahl die Uhrzeit an, die Dich interessiert! So erfährst Du Wissenswertes über die Aufgaben der Mitarbeitenden im Stall sowie über die Tiere am Arenenberg. Gleichzeitig kannst Du in einem Quiz Dein Wissen testen. Viel Spass!') }}</p>
           </div>
         </FadeExpand>
       </div>
@@ -44,7 +45,7 @@
 
             <FadeExpand :show="persona === 'cow'">
               <HeadingTwo class="!mb-0">{{ __('Frida') }}</HeadingTwo>
-              <p class="!text-md">{{ __('Die Kuh Frida ist 2010 geboren. Sie hat schon mehrmals gekalbert. Pro Tag liefert sie im Schnitt 28 Liter Milch.') }}</p>
+              <p class="!text-md">{{ __('Folgen Sie einem typischen Apriltag einer Kuh im Arenenberger Milchviehstall! Die Kuh Frida ist fünf Jahre alt. Sie hat zweimal gekalbert. Pro Tag liefert sie im Schnitt 25 Liter Milch.') }}</p>
             </FadeExpand>
 
             <FadeExpand :show="persona === 'farmer'">

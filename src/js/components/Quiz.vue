@@ -17,7 +17,7 @@
         {{ __(currentQuestion.question) }}
       </div>
       <div v-else class="min-h-123 text-md">
-        {{ __('Du hast das Spiel zu Ende gespielt') }}
+        {{ __('Danke fürs Mitmachen! Du kennst dich jetzt richtig gut im Arenenberger Milchviehstall aus.') }}
       </div>
     </div>
 
@@ -76,7 +76,7 @@
           v-else
           class="border-2 border-evergreen text-sm rounded-full px-16 py-8 hover:border-crimson hover:text-crimson"
           @click="resetQuiz">
-          {{ __('Erneut spielen') }}
+          {{ __('Nochmal spielen') }}
         </button>
       </div>
     </div>

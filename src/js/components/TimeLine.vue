@@ -8,12 +8,12 @@
       <!-- Steps + labels -->
 
       <!-- Start step -->
-      <div class="absolute flex flex-col items-center top-0">
+      <!-- <div class="absolute flex flex-col items-center top-0">
         <span 
           class="text-xs absolute left-13 top-0">
           06.00
         </span>
-      </div>
+      </div> -->
       <!-- // Start step -->
 
       <!-- Steps -->
@@ -24,9 +24,9 @@
         @click="goToStep(i)"
         :style="{ top: `${step.position}%` }">
         <span 
-          class="text-xs absolute left-20"
+          class="text-xs absolute left-20 whitespace-nowrap"
           v-if="i != activeIndex">
-          {{ step.time }}
+          {{ __(step.time) }}
         </span>
         <div class="w-14 h-14 rounded-full bg-evergreen border-2 border-blush cursor-pointer"></div>
       </div>
@@ -35,8 +35,8 @@
       <!-- End step -->
       <div class="absolute flex flex-col items-center bottom-0">
         <span 
-          class="text-xs absolute left-13 bottom-0">
-          22.00
+          class="text-xs absolute left-13 bottom-0 whitespace-nowrap">
+          {{ __("22.00") }}
         </span>
       </div>
       <!-- // End step -->
@@ -73,13 +73,13 @@
 
           <div class="flex ml-59">
             <div class="w-[40%] flex flex-col justify-start">
-              <h3 class="text-xl text-crimson">{{ steps[activeIndex].timeLabel }}</h3>
-              <p class="text-sm">{{ steps[activeIndex].timeDescription }}</p>
+              <h3 class="text-xl text-crimson">{{ __(steps[activeIndex].timeLabel) }}</h3>
+              <p class="text-sm">{{ __(steps[activeIndex].timeDescription) }}</p>
             </div>
             <div class="w-[60%] pl-8">
-              <h3 class="text-xl text-crimson">{{ steps[activeIndex].title }}</h3>
+              <h3 class="text-xl text-crimson">{{ __(steps[activeIndex].title) }}</h3>
               <div class="text-sm" v-if="steps[activeIndex].description">
-                {{ steps[activeIndex].description }}
+                {{ __(steps[activeIndex].description) }}
               </div>
             </div>
           </div>
@@ -97,13 +97,13 @@
 
           <div class="flex ml-59">
             <div class="w-[40%] flex flex-col justify-end">
-              <h3 class="text-xl text-crimson">{{ steps[activeIndex].timeLabel }}</h3>
-              <p class="text-sm">{{ steps[activeIndex].timeDescription }}</p>
+              <h3 class="text-xl text-crimson">{{ __(steps[activeIndex].timeLabel) }}</h3>
+              <p class="text-sm">{{ __(steps[activeIndex].timeDescription) }}</p>
             </div>
             <div class="w-[60%]">
-              <h3 class="text-xl text-crimson">{{ steps[activeIndex].title }}</h3>
+              <h3 class="text-xl text-crimson">{{ __(steps[activeIndex].title) }}</h3>
               <div class="text-sm" v-if="steps[activeIndex].description">
-                {{ steps[activeIndex].description }}
+                {{ __(steps[activeIndex].description) }}
               </div>
             </div>
           </div>
@@ -117,6 +117,8 @@
 
 <script setup>
 import { ref, watch } from 'vue'
+import { useLanguageStore } from '@/js/stores/language'
+const { __ } = useLanguageStore()
 
 const props = defineProps({
   persona: {

@@ -1,34 +1,58 @@
 [
   {
-    "time": "07.00",
-    "position": 10,
-    "timeLabel": "07.00 Uhr",
-    "timeDescription": "Frida geht auf die Weide.",
+    "time": "06.00",
+    "position": 0,
+    "timeLabel": "6 Uhr",
+    "timeDescription": "Frida geht auf die Weide. Sie frisst junges, frisches Gras. Das ist sehr gehaltreiches Futter.",
     "title": "Freier Tierverkehr",
-    "description": "Frida und die anderen Kühe am Arenenberg geniessen grosse Freiheit. Sie entscheiden selbst, wann sie fressen, liegen oder sich melken lassen. Der Betriebsleiter motiviert aber die Kühe, das zu tun, was er möchte."
+    "description": "Frida und die anderen Kühe am Arenenberg geniessen grosse Freiheiten. Sie entscheiden selbst, wann sie fressen und trinken, liegen oder sich melken lassen."
   },
   {
-    "time": "09.00",
-    "position": 30,
-    "timeLabel": "09.00 Uhr",
-    "timeDescription": "Frida geht auf die Weide.",
-    "title": "Freier Tierverkehr",
-    "description": "Die Kuh soll im Sommer möglichst viel junges Gras auf der Weide fressen. Jedoch soll sie nicht den ganzen Tag auf der Weide sein. Mindestens zweimal pro Tag muss sie gemolken werden. Die Weide ist so gross, dass die Kühe sie in einigen Stunden abweiden. Mit dem Wissen, dass sie am Nachmittag wieder auf eine frische Weide gehen können, gehen die Kühe vor dem Mittag zurück in den Stall und lassen sich melken. Danach dürfen sie auf eine frische Weide gehen."
+    "time": "10.00",
+    "position": 25,
+    "timeLabel": "10 Uhr",
+    "timeDescription": "Frida geht zurück zum Stall. Sie freut sich auf den Nachtisch, das Lockfutter, das beim Melkroboter auf sie wartet.",
+    "title": "Weidemanagement",
+    "description": "Die Kühe sollen möglichst viel junges Gras auf der Weide fressen, jedoch nicht den ganzen Tag. Mindestens zweimal täglich müssen sie gemolken werden. Die Weide ist so gross, dass die Kühe sie in einigen Stunden abweiden. Mit dem Wissen, dass sie am Nachmittag wieder auf eine neue, frische Weide zugelassen werden, gehen sie vor dem Mittag zurück in den Stall und lassen sich melken."
+  },
+  {
+    "time": "11.00",
+    "position": 31.25,
+    "timeLabel": "11 Uhr",
+    "timeDescription": "Frida steht im Melkroboter. Sie frisst leckeres Futter und wird gemolken. Der Melkroboter führt die Melkarbeit stets gleich und geduldig aus. Das ist angenehm für Frida.",
+    "title": "Automatisches Melksystem",
+    "description": "Die Kühe werden mit Futter in den Melkroboter gelockt. Die Melkarbeit übernimmt das automatische Melksystem. Es melkt ohne Stress und nicht zu lange. Die Kühe sollen mindestens zweimal pro Tag gemolken werden."
   },
   {
     "time": "12.00",
-    "position": 60,
-    "timeLabel": "12.00 Uhr",
-    "timeDescription": "Frida geht auf die Weide.",
-    "title": "Freier Tierverkehr",
-    "description": "Die Kuh soll im Sommer möglichst viel junges Gras auf der Weide fressen. Jedoch soll sie nicht den ganzen Tag auf der Weide sein. Mindestens zweimal pro Tag muss sie gemolken werden. Die Weide ist so gross, dass die Kühe sie in einigen Stunden abweiden. Mit dem Wissen, dass sie am Nachmittag wieder auf eine frische Weide gehen können, gehen die Kühe vor dem Mittag zurück in den Stall und lassen sich melken. Danach dürfen sie auf eine frische Weide gehen."
+    "position": 37.5,
+    "timeLabel": "12 Uhr",
+    "timeDescription": "Besonders nach dem Melken, aber auch immer wieder zwischendurch, trinkt Frida am Tränketrog frisches Wasser, pro Tag durchschnittlich circa 120 Liter. Nach dem frischen und jungen Gras hat Frida Lust auf etwas Trockenes und Ballastreiches. Sie frisst am Futtertisch Heu. Heu ist ein ideales Ausgleichsfutter zu jungem Gras und stabilisiert die Verdauung von Frida.",
+    "title": "Daten",
+    "description": "Der Melkroboter und ein Sensor am Halsband der Kühe sammeln Daten zur Milch und zur Kuh. Diese Daten beschreiben z. B. die Qualität der Milch oder die Aktivität der Kühe. Sie liefern zudem Hinweise auf ihre Gesundheit."
+  },
+  {
+    "time": "13.00",
+    "position": 43.75,
+    "timeLabel": "13 Uhr",
+    "timeDescription": "Frida will sich ausruhen und legt sich ins frisch eingestreute Sägemehl. Zuvor macht sie Körperhygiene und lässt sich von der automatischen Kuhputzbürste den Staub aus dem Fell bürsten.",
+    "title": "Kompostierungsstall",
+    "description": "Der Kompostierungsstall bietet den Kühen viel Liegekomfort und grosse Bewegungsfreiheit. Die Liegefläche wird mit frischem Einstreumaterial wie Sägemehl eingefüllt. Aus dem Einstreumaterial, dem Kot und dem Harn der Kühe entsteht ein wertvoller Kompost, der als Dünger auf die Felder verteilt wird."
+  },
+  {
+    "time": "17.00",
+    "position": 68.75,
+    "timeLabel": "17 Uhr",
+    "timeDescription": "Es ist Zeit, nochmals auf die Weide zu gehen. Frida begibt sich zum Weidetor und erhält Zugang zu einer neuen, frischen Weide mit saftigem Gras.",
+    "title": "Weidetor",
+    "description": "Die Kühe werden über das Weidetor gesteuert. Das Weidetor gibt ihnen den Zugang zur Weide nur frei, wenn ihre letzte Melkung weniger als sieben Stunden zurückliegt. Ansonsten werden sie zurück in den Stall geleitet, um zuerst den Melkroboter aufzusuchen."
   },
   {
     "time": "20.00",
-    "position": 85,
-    "timeLabel": "20.00 Uhr",
-    "timeDescription": "Frida geht auf die Weide.",
-    "title": "Freier Tierverkehr",
-    "description": "Frida und die anderen Kühe am Arenenberg geniessen grosse Freiheit. Sie entscheiden selbst, wann sie fressen, liegen oder sich melken lassen. Der Betriebsleiter motiviert aber die Kühe, das zu tun, was er möchte."
+    "position": 87.5,
+    "timeLabel": "20 Uhr",
+    "timeDescription": "Satt gefressen begibt sich Frida zurück in den Stall und lässt sich nochmals melken. Danach entscheidet sie selbst, ob sie die Nacht im Stall oder im Freien auf der Weide verbringt.",
+    "title": "",
+    "description": ""
   }
 ]
