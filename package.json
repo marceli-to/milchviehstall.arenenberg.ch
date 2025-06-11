@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "postbuild": "node copy-map-images.cjs",
     "preview": "vite preview"
   },
   "dependencies": {
