@@ -1,9 +1,9 @@
 <template>
-  <div v-if="steps.length" class="flex relative h-[620px]">
+  <div v-if="steps.length" class="flex relative h-[600px]">
     <!-- Timeline column -->
-    <div class="relative w-40 flex justify-center">
+    <div class="relative w-40 flex justify-center h-[inherit]">
       <!-- Full vertical line -->
-      <div class="absolute top-0 bottom-0 w-[2px] bg-evergreen"></div>
+      <div class="absolute top-0 bottom-0 w-[2px] h-[inherit] bg-evergreen"></div>
 
       <!-- Steps + labels -->
 
@@ -33,25 +33,33 @@
       <!-- // Steps -->
 
       <!-- End step -->
-      <div class="absolute flex flex-col items-center bottom-0">
+      <!-- <div class="absolute flex flex-col items-center bottom-0">
         <span 
           class="text-xs absolute left-13 bottom-0 whitespace-nowrap">
           {{ __("22.00") }}
         </span>
-      </div>
+      </div> -->
       <!-- // End step -->
 
       <!-- Active step + triangles -->
       <div
         class="absolute left-1/2 -translate-x-1/2 -translate-y-28 flex flex-col items-center transition-all duration-500"
         :style="steps[activeIndex] ? { top: `${steps[activeIndex].position}%` } : {}">
-        <button @click="goToPreviousStep" class="text-crimson">
+        <button 
+          @click="goToPreviousStep" 
+          class="text-crimson"
+          :class="activeIndex === 0 ? 'opacity-0' : 'opacity-100 transition-all duration-500'">
           <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-34 h-auto">
             <path d="M11.748 1.97198L21.748 18.972H1.74805L11.748 1.97198Z" fill="#D22837" stroke="#FBE1E9" stroke-width="2"/>
           </svg>
         </button>
+
         <div class="size-17 bg-crimson rounded-full border-2 border-blush"></div>
-        <button @click="goToNextStep" class="text-crimson">
+
+        <button 
+          @click="goToNextStep" 
+          class="text-crimson"
+          :class="activeIndex === steps.length - 1 ? 'opacity-0' : 'opacity-100 transition-all duration-500'">
           <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-34 h-auto">
             <path d="M11.748 18L1.74805 1L21.748 1L11.748 18Z" fill="#D22837" stroke="#FBE1E9" stroke-width="2"/>
           </svg>
@@ -66,19 +74,19 @@
       <!-- Top > Down -->
       <transition name="fade" mode="out-in">
         <div
-          v-if="steps[activeIndex] && steps[activeIndex].position < 50"
+          v-if="steps[activeIndex] && steps[activeIndex].position <= 50"
           :key="'top-' + activeIndex"
           class="absolute left-0 w-full flex flex-col gap-x-20"
-          :style="{ top: `${steps[activeIndex].position}%` }">
+          :style="{ top: `${steps[activeIndex].position - 1}%` }">
 
           <div class="flex ml-59">
             <div class="w-[40%] flex flex-col justify-start">
               <h3 class="text-xl text-crimson">{{ __(steps[activeIndex].timeLabel) }}</h3>
-              <p class="text-sm">{{ __(steps[activeIndex].timeDescription) }}</p>
+              <p class="text-sm hyphens-auto">{{ __(steps[activeIndex].timeDescription) }}</p>
             </div>
             <div class="w-[60%] pl-8">
               <h3 class="text-xl text-crimson">{{ __(steps[activeIndex].title) }}</h3>
-              <div class="text-sm" v-if="steps[activeIndex].description">
+              <div class="text-sm hyphens-auto" v-if="steps[activeIndex].description">
                 {{ __(steps[activeIndex].description) }}
               </div>
             </div>
@@ -90,10 +98,10 @@
       <!-- Bottom < Up -->
       <transition name="fade" mode="out-in">
         <div
-          v-if="steps[activeIndex] && steps[activeIndex].position >= 50"
+          v-if="steps[activeIndex] && steps[activeIndex].position > 50"
           :key="'bottom-' + activeIndex"
           class="absolute left-0 w-full flex flex-col gap-x-20"
-          :style="{ bottom: `${90 - steps[activeIndex].position}%` }">
+          :style="{ bottom: `${97 - steps[activeIndex].position}%` }">
 
           <div class="flex ml-59">
             <div class="w-[40%] flex flex-col justify-end">
@@ -129,7 +137,6 @@ const props = defineProps({
 
 const steps = ref([])
 const activeIndex = ref(0)
-
 const timelineMap = {
   cow: () => import('@/data/timeline-cow.json'),
   farmer: () => import('@/data/timeline-farmer.json')

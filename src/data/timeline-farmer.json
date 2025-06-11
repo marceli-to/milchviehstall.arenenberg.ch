@@ -1,34 +1,98 @@
 [
   {
+    "time": "06.00",
+    "position": 0.0,
+    "timeLabel": "6 Uhr",
+    "timeDescription": "Der Bauer startet um 6 Uhr seine Arbeit im Arenenberger Milchviehstall. Feierabend ist um 18 Uhr. Als Erstes überprüft der Bauer den Milchtank (Milchtemperatur, Filter). Ab und zu wird er von einem frisch geborenen Kalb überrascht, das bereits bei seiner Mutter steht. In rund neunzig Prozent der Fälle erfolgt eine Kalbung in der Nacht.",
+    "title": "Stall",
+    "description": "Der Arenenberger Milchviehstall bietet den Kühen maximalen Liegekomfort und grosse Bewegungsfreiheit. So können sie ohne Stress ihre Kälber gebären. Die Jungtiere vertragen die tiefen Temperaturen im Stall gut. Was sie nicht mögen, ist die Zugluft."
+  },
+  {
     "time": "07.00",
-    "position": 10,
-    "timeLabel": "07.00 Uhr",
-    "timeDescription": "Bäuerin geht auf die Weide.",
-    "title": "Freier Tierverkehr",
-    "description": "Bäuerin und die anderen Kühe am Arenenberg geniessen grosse Freiheit. Sie entscheiden selbst, wann sie fressen, liegen oder sich melken lassen. Der Betriebsleiter motiviert aber die Kühe, das zu tun, was er möchte."
+    "position": 8.33,
+    "timeLabel": "7 Uhr",
+    "timeDescription": "Der Bauer reinigt mit Wasser den Melkroboter und den Standplatz für die Kühe. Er erwärmt die Milch für die Kälber auf maximal 42 Grad Celsius. Die vom automatischen Melksystem erfassten Daten zeigen dem Bauer an, ob eine Kuh brünstig oder krank ist. Er ergreift die entsprechenden Massnahmen und lässt die Kuh besamen oder behandeln.",
+    "title": "",
+    "description": ""
+  },
+  {
+    "time": "08.00",
+    "position": 16.67,
+    "timeLabel": "8 Uhr",
+    "timeDescription": "Der Bauer säubert die Futterkrippe. Mit dem Kran verteilt er Heu und Emd. Ab August verfüttert der Bauer zusätzlich Frischmais. Im Winter versorgt er jede Kuh mit zehn Kilogramm Karotten oder Randen, vier Kilogramm Vollmaiswürfel und rund zwei Kilogramm Zuckerrübenschnitzel.",
+    "title": "Futter und Heubelüftung",
+    "description": "Im Winter gibt es kein frisches Gras für die Kühe, nur Heu und Dürrfutter. Damit das Heu hochwertig und schmackhaft bleibt, muss es aktiv im Heustock mit warmer Luft nachgetrocknet werden."
   },
   {
     "time": "09.00",
-    "position": 30,
-    "timeLabel": "09.00 Uhr",
-    "timeDescription": "Bäuerin geht auf die Weide.",
-    "title": "Freier Tierverkehr",
-    "description": "Bäuerin und die anderen Kühe am Arenenberg geniessen grosse Freiheit. Sie entscheiden selbst, wann sie fressen, liegen oder sich melken lassen. Der Betriebsleiter motiviert aber die Kühe, das zu tun, was er möchte."
+    "position": 25.0,
+    "timeLabel": "9 Uhr",
+    "timeDescription": "Der Bauer überprüft das Kraftfuttersilo und den Mineralstoffbehälter. Dann widmet er sich den Kälbern: füttern, Wasser kontrollieren, Futter auffüllen. Schliesslich mistet er aus, streut die Liegefläche neu ein, wischt den Vorplatz und reinigt das sogenannte Milchtaxi. Dieser mobile Milchtank versorgt die Jungtiere mit Milch.",
+    "title": "",
+    "description": ""
+  },
+  {
+    "time": "10.00",
+    "position": 33.33,
+    "timeLabel": "10 Uhr",
+    "timeDescription": "Der Bauer fräst die Liegeflächen, damit Kot und Harn gut durchmischt sind und der Kompostierungsprozess optimal verläuft.",
+    "title": "Entmistungsroboter",
+    "description": "Bei der Reinigung des Stallbodens wird der Bauer von einem Entmistungsroboter unterstützt. Alle neunzig Minuten fährt dieser eine programmierte Route ab, saugt den Mist in einen Tank auf und entlädt diesen in die Güllegrube. Er befeuchtet den Laufgang und spült ihn nach."
+  },
+  {
+    "time": "11.00",
+    "position": 41.67,
+    "timeLabel": "11 Uhr",
+    "timeDescription": "Der Bauer geht zu den Leghennen im mobilen Hühnerstall auf der Wiese. Er holt die Eier raus, überprüft den Futter- und Wasserstand und schaut, ob es den rund 350 Hühnern gut geht. Danach kümmert er sich um die circa zwanzig Schafe. Er kontrolliert die Tiere, das Wasser und Futter, den Zaun und die Einstreu im Stall. Und er schaut nach, ob über Nacht ein Lamm geboren ist.",
+    "title": "",
+    "description": ""
   },
   {
     "time": "12.00",
-    "position": 60,
-    "timeLabel": "12.00 Uhr",
-    "timeDescription": "Bäuerin geht auf die Weide.",
-    "title": "Freier Tierverkehr",
-    "description": "Bäuerin und die anderen Kühe am Arenenberg geniessen grosse Freiheit. Sie entscheiden selbst, wann sie fressen, liegen oder sich melken lassen. Der Betriebsleiter motiviert aber die Kühe, das zu tun, was er möchte."
+    "position": 50.0,
+    "timeLabel": "12 Uhr",
+    "timeDescription": "Mittagszeit",
+    "title": "",
+    "description": ""
   },
   {
-    "time": "20.00",
-    "position": 90,
-    "timeLabel": "20.00 Uhr",
-    "timeDescription": "Bäuerin geht auf die Weide.",
-    "title": "Freier Tierverkehr",
-    "description": "Bäuerin und die anderen Kühe am Arenenberg geniessen grosse Freiheit. Sie entscheiden selbst, wann sie fressen, liegen oder sich melken lassen. Der Betriebsleiter motiviert aber die Kühe, das zu tun, was er möchte."
+    "time": "13.00",
+    "position": 58.33,
+    "timeLabel": "13 Uhr",
+    "timeDescription": "Wenn die Tiere versorgt sind, nimmt der Bauer die übrigen Arbeiten im Stall oder auf dem Feld in Angriff: heuen, Acker bestellen, Instandstellungen.",
+    "title": "",
+    "description": ""
+  },
+  {
+    "time": "15.00",
+    "position": 75.0,
+    "timeLabel": "15 Uhr",
+    "timeDescription": "Für den Folgetag richtet der Bauer zwei neue Weide-Koppeln.",
+    "title": "",
+    "description": ""
+  },
+  {
+    "time": "16.00",
+    "position": 83.33,
+    "timeLabel": "16 Uhr",
+    "timeDescription": "Der Bauer widmet sich erneut der Stallarbeit: Milch wärmen für die Kälber und Kälber tränken, den Kühen Futter vorlegen, Geräte reinigen.",
+    "title": "",
+    "description": ""
+  },
+  {
+    "time": "17.00",
+    "position": 91.67,
+    "timeLabel": "17 Uhr",
+    "timeDescription": "Die Liegefläche der Kühe wird gefräst, Futter und Wasser werden aufgefüllt und die Tiere beobachtet.",
+    "title": "",
+    "description": ""
+  },
+  {
+    "time": "18.00",
+    "position": 100.0,
+    "timeLabel": "18 Uhr",
+    "timeDescription": "Eine Schlusskontrolle bei den Leghennen und das Ausstreuen von Körnern beenden den Arbeitstag im Arenenberger Milchviehstall.",
+    "title": "",
+    "description": ""
   }
 ]

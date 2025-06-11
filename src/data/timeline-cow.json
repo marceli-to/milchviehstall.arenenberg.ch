@@ -9,7 +9,7 @@
   },
   {
     "time": "10.00",
-    "position": 25,
+    "position": 28.57,
     "timeLabel": "10 Uhr",
     "timeDescription": "Frida geht zurück zum Stall. Sie freut sich auf den Nachtisch, das Lockfutter, das beim Melkroboter auf sie wartet.",
     "title": "Weidemanagement",
@@ -17,7 +17,7 @@
   },
   {
     "time": "11.00",
-    "position": 31.25,
+    "position": 35.71,
     "timeLabel": "11 Uhr",
     "timeDescription": "Frida steht im Melkroboter. Sie frisst leckeres Futter und wird gemolken. Der Melkroboter führt die Melkarbeit stets gleich und geduldig aus. Das ist angenehm für Frida.",
     "title": "Automatisches Melksystem",
@@ -25,7 +25,7 @@
   },
   {
     "time": "12.00",
-    "position": 37.5,
+    "position": 42.86,
     "timeLabel": "12 Uhr",
     "timeDescription": "Besonders nach dem Melken, aber auch immer wieder zwischendurch, trinkt Frida am Tränketrog frisches Wasser, pro Tag durchschnittlich circa 120 Liter. Nach dem frischen und jungen Gras hat Frida Lust auf etwas Trockenes und Ballastreiches. Sie frisst am Futtertisch Heu. Heu ist ein ideales Ausgleichsfutter zu jungem Gras und stabilisiert die Verdauung von Frida.",
     "title": "Daten",
@@ -33,7 +33,7 @@
   },
   {
     "time": "13.00",
-    "position": 43.75,
+    "position": 50,
     "timeLabel": "13 Uhr",
     "timeDescription": "Frida will sich ausruhen und legt sich ins frisch eingestreute Sägemehl. Zuvor macht sie Körperhygiene und lässt sich von der automatischen Kuhputzbürste den Staub aus dem Fell bürsten.",
     "title": "Kompostierungsstall",
@@ -41,7 +41,7 @@
   },
   {
     "time": "17.00",
-    "position": 68.75,
+    "position": 78.57,
     "timeLabel": "17 Uhr",
     "timeDescription": "Es ist Zeit, nochmals auf die Weide zu gehen. Frida begibt sich zum Weidetor und erhält Zugang zu einer neuen, frischen Weide mit saftigem Gras.",
     "title": "Weidetor",
@@ -49,7 +49,7 @@
   },
   {
     "time": "20.00",
-    "position": 87.5,
+    "position": 100,
     "timeLabel": "20 Uhr",
     "timeDescription": "Satt gefressen begibt sich Frida zurück in den Stall und lässt sich nochmals melken. Danach entscheidet sie selbst, ob sie die Nacht im Stall oder im Freien auf der Weide verbringt.",
     "title": "",

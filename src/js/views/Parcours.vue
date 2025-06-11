@@ -49,8 +49,8 @@
             </FadeExpand>
 
             <FadeExpand :show="persona === 'farmer'">
-              <HeadingTwo class="!mb-0">{{ __('Bäuerin') }}</HeadingTwo>
-              <p class="!text-md">{{ __('Frida ist eine Kuh am Arenenberg. Sie ist eine Kuh, die sich mit Berta vertraut gemacht hat.') }}</p>
+              <HeadingTwo class="!mb-0">{{ __('Bauer') }}</HeadingTwo>
+              <p class="!text-md">{{ __('Folgen Sie einem typischen Arbeitstag des Bauern im Arenenberger Milchviehstall!') }}</p>
             </FadeExpand>
           </div>
         </div>
@@ -59,7 +59,7 @@
 
       <!-- Timeline -->
       <template v-if="persona">
-        <div class="pt-8 mb-24 text-sm">
+        <div class="pt-8 mb-16 text-sm">
           <strong>{{ __('Tageszeit') }}</strong>
         </div>
         <TimeLine :persona="persona" />
