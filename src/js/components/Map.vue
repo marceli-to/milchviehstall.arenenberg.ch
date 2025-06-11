@@ -1,6 +1,7 @@
+
 <template>
   <figure class="relative">
-    <!-- Show dynamic timeline image if available -->
+    <!-- Dynamic image based on the timeline step -->
     <img
       v-if="step?.mapImage"
       :src="getImageUrl(step.mapImage)"
@@ -9,7 +10,7 @@
       class="block w-full h-auto"
     />
 
-    <!-- Fallback image if no step is selected -->
+    <!-- Fallback static background image -->
     <img
       v-else
       src="/img/map-digitaler-kuhstall.png"
@@ -18,7 +19,7 @@
       class="block w-full h-auto"
     />
 
-    <!-- Language overlay (always shown) -->
+    <!-- Always show language overlay -->
     <img
       :src="`/img/map-digitaler-kuhstall-text-${currentLang}.png`"
       width="1319" height="714"
@@ -27,7 +28,6 @@
     />
   </figure>
 </template>
-
 <script setup>
 import { computed } from 'vue'
 import { useLanguageStore } from '@/js/stores/language'
@@ -39,15 +39,15 @@ const props = defineProps({
   step: Object
 })
 
-// Import all possible timeline images and map them to URLs
-const images = import.meta.glob('/img/map-digitaler-kuhstall-*.png', {
+// Updated import.meta.glob using the correct options
+const images = import.meta.glob('@/assets/img/map-digitaler-kuhstall-*.png', {
   eager: true,
-  as: 'url'
+  query: '?url',
+  import: 'default',
 })
 
-// Utility function to safely get the correct image URL
+// Utility to resolve image URLs from filenames
 function getImageUrl(filename) {
-  return images[`/img/${filename}`] || ''
+  return images[`@/assets/img/${filename}`] || ''
 }
 </script>
-
