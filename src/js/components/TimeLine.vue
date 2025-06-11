@@ -128,15 +128,12 @@ import { ref, watch } from 'vue'
 import { useLanguageStore } from '@/js/stores/language'
 const { __ } = useLanguageStore()
 
-const props = defineProps({
-  persona: {
-    type: String,
-    required: true
-  }
-})
+const props = defineProps({ persona: { type: String, required: true } })
+const emit = defineEmits(['update:step'])
 
 const steps = ref([])
 const activeIndex = ref(0)
+
 const timelineMap = {
   cow: () => import('@/data/timeline-cow.json'),
   farmer: () => import('@/data/timeline-farmer.json')
@@ -147,19 +144,20 @@ watch(() => props.persona, async (newPersona) => {
   if (timelineMap[newPersona]) {
     const module = await timelineMap[newPersona]()
     steps.value = module.default
+    emit('update:step', steps.value[0]) // initial step
   }
 }, { immediate: true })
 
+watch(activeIndex, (newIndex) => {
+  emit('update:step', steps.value[newIndex])
+})
+
 function goToPreviousStep() {
-  if (activeIndex.value > 0) {
-    activeIndex.value--
-  }
+  if (activeIndex.value > 0) activeIndex.value--
 }
 
 function goToNextStep() {
-  if (activeIndex.value < steps.value.length - 1) {
-    activeIndex.value++
-  }
+  if (activeIndex.value < steps.value.length - 1) activeIndex.value++
 }
 
 function goToStep(index) {
@@ -167,9 +165,7 @@ function goToStep(index) {
     activeIndex.value = index
   }
 }
-
 </script>
-
 <style scoped>
 .fade-enter-active, .fade-leave-active {
   transition: opacity 0.3s ease;

@@ -1,6 +1,7 @@
 [
   {
     "time": "06.00",
+    "mapImage": "map-digitaler-kuhstall-kuh-6.png",
     "position": 0,
     "timeLabel": "6 Uhr",
     "timeDescription": "Frida geht auf die Weide. Sie frisst junges, frisches Gras. Das ist sehr gehaltreiches Futter.",
@@ -9,6 +10,7 @@
   },
   {
     "time": "10.00",
+    "mapImage": "map-digitaler-kuhstall-kuh-10.png",
     "position": 28.57,
     "timeLabel": "10 Uhr",
     "timeDescription": "Frida geht zurück zum Stall. Sie freut sich auf den Nachtisch, das Lockfutter, das beim Melkroboter auf sie wartet.",
@@ -17,6 +19,7 @@
   },
   {
     "time": "11.00",
+    "mapImage": "map-digitaler-kuhstall-kuh-11.png",
     "position": 35.71,
     "timeLabel": "11 Uhr",
     "timeDescription": "Frida steht im Melkroboter. Sie frisst leckeres Futter und wird gemolken. Der Melkroboter führt die Melkarbeit stets gleich und geduldig aus. Das ist angenehm für Frida.",
@@ -25,6 +28,7 @@
   },
   {
     "time": "12.00",
+    "mapImage": "map-digitaler-kuhstall-kuh-12.png",
     "position": 42.86,
     "timeLabel": "12 Uhr",
     "timeDescription": "Besonders nach dem Melken, aber auch immer wieder zwischendurch, trinkt Frida am Tränketrog frisches Wasser, pro Tag durchschnittlich circa 120 Liter. Nach dem frischen und jungen Gras hat Frida Lust auf etwas Trockenes und Ballastreiches. Sie frisst am Futtertisch Heu. Heu ist ein ideales Ausgleichsfutter zu jungem Gras und stabilisiert die Verdauung von Frida.",
@@ -33,6 +37,7 @@
   },
   {
     "time": "13.00",
+    "mapImage": "map-digitaler-kuhstall-kuh-13.png",
     "position": 50,
     "timeLabel": "13 Uhr",
     "timeDescription": "Frida will sich ausruhen und legt sich ins frisch eingestreute Sägemehl. Zuvor macht sie Körperhygiene und lässt sich von der automatischen Kuhputzbürste den Staub aus dem Fell bürsten.",
@@ -41,6 +46,7 @@
   },
   {
     "time": "17.00",
+    "mapImage": "map-digitaler-kuhstall-kuh-17.png",
     "position": 78.57,
     "timeLabel": "17 Uhr",
     "timeDescription": "Es ist Zeit, nochmals auf die Weide zu gehen. Frida begibt sich zum Weidetor und erhält Zugang zu einer neuen, frischen Weide mit saftigem Gras.",
@@ -49,6 +55,7 @@
   },
   {
     "time": "20.00",
+    "mapImage": "map-digitaler-kuhstall-kuh-20.png",
     "position": 100,
     "timeLabel": "20 Uhr",
     "timeDescription": "Satt gefressen begibt sich Frida zurück in den Stall und lässt sich nochmals melken. Danach entscheidet sie selbst, ob sie die Nacht im Stall oder im Freien auf der Weide verbringt.",

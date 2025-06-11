@@ -1,12 +1,43 @@
 <template>
   <figure class="relative">
-    <img src="/img/map-digitaler-kuhstall.png" width="1319" height="714" alt="" class="block w-full h-auto">
-    <img :src="`/img/map-digitaler-kuhstall-text-${currentLang}.png`" width="1319" height="714" alt="" class="block w-full h-auto absolute top-0 left-0">
+    <!-- Default background image if no step image -->
+    <img 
+      v-if="!props.step?.mapImage"
+      src="/img/map-digitaler-kuhstall.png" 
+      width="1319" height="714" 
+      alt="" 
+      class="block w-full h-auto" 
+      loading="lazy"
+    >
+
+    <!-- Dynamic image if step is available -->
+    <img 
+      v-else
+      :src="`/img/${props.step.mapImage}`" 
+      width="1319" height="714" 
+      alt="" 
+      class="block w-full h-auto" 
+      loading="lazy"
+    >
+
+    <!-- Language overlay stays on top -->
+    <img 
+      :src="`/img/map-digitaler-kuhstall-text-${currentLang}.png`" 
+      width="1319" height="714" 
+      alt="" 
+      class="block w-full h-auto absolute top-0 left-0"
+      loading="lazy"
+    >
   </figure>
 </template>
+
 <script setup>
+import { computed } from 'vue'
 import { useLanguageStore } from '@/js/stores/language'
-import { computed, onMounted } from 'vue'
 const languageStore = useLanguageStore()
 const currentLang = computed(() => languageStore.current)
+
+const props = defineProps({
+  step: Object
+})
 </script>

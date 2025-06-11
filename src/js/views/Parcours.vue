@@ -62,7 +62,7 @@
         <div class="pt-8 mb-16 text-sm">
           <strong>{{ __('Tageszeit') }}</strong>
         </div>
-        <TimeLine :persona="persona" />
+        <TimeLine :persona="persona" @update:step="(step) => currentStep = step" />
       </template>
       <!-- // Timeline -->
 
@@ -71,8 +71,7 @@
 
     <!-- Map -->
     <div class="col-span-13 px-16 pt-60 overflow-hidden h-[inherit] border-l border-evergreen">
-      <Map />
-
+      <Map :step="currentStep" />
       <div 
         class="absolute -bottom-20 right-24 w-full max-w-lg"
         :class="persona === null ? 'opacity-0' : 'opacity-100 transition-all duration-500'">
@@ -100,6 +99,7 @@ import { useLanguageStore } from '@/js/stores/language'
 const { __ } = useLanguageStore()
 
 let persona = ref(null);
+const currentStep = ref(null);
 
 const router = useRouter();
 let timeoutId;
