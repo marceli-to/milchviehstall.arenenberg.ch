@@ -3,7 +3,7 @@
     <!-- Default background image if no step image -->
     <img 
       v-if="!props.step?.mapImage"
-      src="/img/map-digitaler-kuhstall.png" 
+      src="@/map-digitaler-kuhstall.png" 
       width="1319" height="714" 
       alt="" 
       class="block w-full h-auto" 
@@ -13,7 +13,7 @@
     <!-- Dynamic image if step is available -->
     <img 
       v-else
-      :src="`/img/${props.step.mapImage}`" 
+      :src="`@/${props.step.mapImage}`" 
       width="1319" height="714" 
       alt="" 
       class="block w-full h-auto" 
@@ -22,7 +22,7 @@
 
     <!-- Language overlay stays on top -->
     <img 
-      :src="`/img/map-digitaler-kuhstall-text-${currentLang}.png`" 
+      :src="`@/map-digitaler-kuhstall-text-${currentLang}.png`" 
       width="1319" height="714" 
       alt="" 
       class="block w-full h-auto absolute top-0 left-0"
