@@ -53,7 +53,7 @@ const showError = ref(false)
 const isValid = ref(false)
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
 
-const correctPin = '1234'
+const correctPin = '4529'
 
 const handleInput = (n) => {
   if (currentIndex.value >= 4 || isValid.value) return
