@@ -84,23 +84,12 @@
   </div>
 </template>
 <script setup>
-import { ref, computed, watch } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import HeadingTwo from '@/js/components/headings/H2.vue'
 import { useLanguageStore } from '@/js/stores/language'
+import quizData from '@/data/quiz.json'
 
 const { __ } = useLanguageStore()
-
-const props = defineProps({
-  persona: {
-    type: String,
-    required: true,
-  },
-})
-
-const quizMap = {
-  cow: () => import('@/data/quiz-cow.json'),
-  farmer: () => import('@/data/quiz-farmer.json')
-}
 
 const questions = ref([])
 const current = ref(0)
@@ -109,18 +98,15 @@ const quizFinished = ref(false)
 
 const currentQuestion = computed(() => questions.value[current.value])
 
-watch(() => props.persona, async (newPersona) => {
+onMounted(() => {
   resetQuiz()
-  if (quizMap[newPersona]) {
-    const module = await quizMap[newPersona]()
-    questions.value = module.default
-  }
-}, { immediate: true })
+  questions.value = quizData
+})
 
 function selectAnswer(key) {
+  if (selected.value !== null) return
   selected.value = key
 
-  // If it's the last question, start 3-second timer
   if (current.value === questions.value.length - 1) {
     setTimeout(() => {
       quizFinished.value = true
@@ -141,4 +127,3 @@ function resetQuiz() {
   quizFinished.value = false
 }
 </script>
-
