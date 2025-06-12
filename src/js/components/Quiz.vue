@@ -110,7 +110,7 @@ function selectAnswer(key) {
   if (current.value === questions.value.length - 1) {
     setTimeout(() => {
       quizFinished.value = true
-    }, 3000)
+    }, 2000)
   }
 }
 
