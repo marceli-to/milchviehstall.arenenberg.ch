@@ -74,17 +74,17 @@
       <!-- Top > Down -->
       <transition name="fade" mode="out-in">
         <div
-          v-if="steps[activeIndex] && steps[activeIndex].position <= 50"
+          v-if="steps[activeIndex] && steps[activeIndex].anchor == 'top'"
           :key="'top-' + activeIndex"
           class="absolute left-0 w-full flex flex-col gap-x-20"
           :style="{ top: `${steps[activeIndex].position - 1}%` }">
 
-          <div class="flex ml-59">
+          <div class="flex ml-44">
             <div class="w-[40%] flex flex-col justify-start">
               <h3 class="text-xl text-crimson">{{ __(steps[activeIndex].timeLabel) }}</h3>
               <p class="text-sm hyphens-auto">{{ __(steps[activeIndex].timeDescription) }}</p>
             </div>
-            <div class="w-[60%] pl-8">
+            <div class="w-[60%] pl-16">
               <h3 class="text-xl text-crimson">{{ __(steps[activeIndex].title) }}</h3>
               <div class="text-sm hyphens-auto" v-if="steps[activeIndex].description">
                 {{ __(steps[activeIndex].description) }}
@@ -98,12 +98,12 @@
       <!-- Bottom < Up -->
       <transition name="fade" mode="out-in">
         <div
-          v-if="steps[activeIndex] && steps[activeIndex].position > 50"
+          v-if="steps[activeIndex] && steps[activeIndex].anchor == 'bottom'"
           :key="'bottom-' + activeIndex"
           class="absolute left-0 w-full flex flex-col gap-x-20"
           :style="{ bottom: `${97 - steps[activeIndex].position}%` }">
 
-          <div class="flex ml-59">
+          <div class="flex ml-44">
             <div class="w-[40%] flex flex-col justify-end">
               <h3 class="text-xl text-crimson">{{ __(steps[activeIndex].timeLabel) }}</h3>
               <p class="text-sm">{{ __(steps[activeIndex].timeDescription) }}</p>

@@ -8,7 +8,9 @@
       <!-- Start -->
       <div class="flex gap-x-24 pb-16 -mt-8 border-b border-evergreen">
         <div class="text-sm min-w-75">
-          <strong>{{ __('Start') }}</strong>
+          <a href="javascript:void(0);" @click="persona = null">
+            <strong>{{ __('Start') }}</strong>
+          </a>
         </div>
         <FadeExpand :show="persona === null">
           <div class="mt-24 pb-8 overflow-hidden">
@@ -41,7 +43,7 @@
             </button>
           </div>
           
-          <div class="mt-16 ml-24">
+          <div class="mt-16 ml-9">
 
             <FadeExpand :show="persona === 'cow'">
               <HeadingTwo class="!mb-0">{{ __('Frida') }}</HeadingTwo>
@@ -83,7 +85,7 @@
   </Main>
 </template>
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue';
+import { ref, onMounted, onBeforeUnmount, watch } from 'vue';
 import { useRouter } from 'vue-router';
 import Header from '@/js/components/layout/Header.vue';
 import Main from '@/js/components/layout/Main.vue';
@@ -105,6 +107,10 @@ const router = useRouter();
 let timeoutId;
 
 const limitTime = 900000; // 15 minutes
+
+watch(persona, () => {
+  currentStep.value = null;
+});
 
 onMounted(() => {
   timeoutId = setTimeout(() => {

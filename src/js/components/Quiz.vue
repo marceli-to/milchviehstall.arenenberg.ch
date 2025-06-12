@@ -52,10 +52,10 @@
       <!-- Feedback -->
       <div class="text-sm" v-if="selected !== null && !quizFinished">
         <span class="text-evergreen" v-if="selected === currentQuestion.correct">
-          {{ __('Deine Antwort war korrekt.') }}
+          {{ __('Deine Antwort ist korrekt.') }}
         </span>
         <span class="text-crimson" v-else>
-          {{ __('Falsch! Richtig ist Antwort') }} {{ currentQuestion.correct }}
+          {{ __('Falsch! Richtig ist Antwort') }} {{ currentQuestion.correct }}.
         </span>
       </div>
       <div v-else></div>
