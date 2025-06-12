@@ -85,7 +85,7 @@
   </Main>
 </template>
 <script setup>
-import { ref, onMounted, onBeforeUnmount, watch } from 'vue';
+import { ref, watch } from 'vue';
 import { useRouter } from 'vue-router';
 import Header from '@/js/components/layout/Header.vue';
 import Main from '@/js/components/layout/Main.vue';
@@ -103,23 +103,8 @@ const { __ } = useLanguageStore()
 let persona = ref(null);
 const currentStep = ref(null);
 
-const router = useRouter();
-let timeoutId;
-
-const limitTime = 900000; // 15 minutes
-
 watch(persona, () => {
   currentStep.value = null;
-});
-
-onMounted(() => {
-  timeoutId = setTimeout(() => {
-    router.push({ name: 'home' });
-  }, limitTime);
-});
-
-onBeforeUnmount(() => {
-  clearTimeout(timeoutId);
 });
 
 </script>
