@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  @apply select-none;
+}
+
 strong {
   @apply font-gt-alpina-bold font-normal;
 }
